@@ -1,4 +1,4 @@
-package FirstTests;
+package firstTests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
@@ -11,15 +11,16 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class FirstAutoTests {
+public class firstAutoTests {
 
     @Test
     void successFillTest () {
         Configuration.browserSize = "1920x1080";
         open("https://demoqa.com/automation-practice-form");
 
-        $(".main-header").shouldHave(text("Practice Form"));
+        // Заполнение формы
 
+        $(".main-header").shouldHave(text("Practice Form"));
         $("#firstName").setValue("My");
         $("#lastName").setValue("Name");
         $("#userEmail").setValue("myEmail@gmail.com");
@@ -40,6 +41,8 @@ public class FirstAutoTests {
         $(byText("Select City")).click();
         $(byText("Delhi")).click();
         $("#submit").click();
+
+        //Проверка отправленной формы
 
     }
 }
