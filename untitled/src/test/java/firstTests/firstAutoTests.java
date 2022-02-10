@@ -44,6 +44,17 @@ public class firstAutoTests {
 
         //Проверка отправленной формы
 
+        $(".table-responsive").shouldHave(text("My Name"));
+        $(".table-responsive").shouldHave(text("myEmail@gmail.com"));
+        $(".table-responsive").shouldHave(text("Male"));
+        $(".table-responsive").shouldHave(text("1234567890"));
+        $(".table-responsive").shouldHave(text("31 December,1999"));
+        $(".table-responsive").shouldHave(text("Maths"));
+        $(".table-responsive").shouldHave(text("Sports"));
+        $(".table-responsive").shouldHave(text("swef.png"));
+        $(".table-responsive").shouldHave(text("MyAdress 14-88"));
+        $(".table-responsive").shouldHave(text("NCR"));
+        $(".table-responsive").shouldHave(text("Delhi"));
     }
 }
 
