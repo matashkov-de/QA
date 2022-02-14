@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class firstAutoTests {
+public class RegistrationFormTest {
 
     @Test
     void successFillTest () {
@@ -33,7 +33,7 @@ public class firstAutoTests {
         $("#subjectsInput").setValue("Math");
         $(byText("Maths")).click();
         $(byText("Sports")).click();
-        $("#uploadPicture").uploadFile(new File("src/test/java/data/swef.png"));
+        $("#uploadPicture").uploadFile(new File("src/test/resources/swef.png"));
         $("#currentAddress").setValue("MyAdress 14-88");
         $("#state").scrollTo();
         $(byText("Select State")).click();
@@ -44,19 +44,17 @@ public class firstAutoTests {
 
         //Проверка отправленной формы
 
-        $(".table-responsive").shouldHave(text("My Name"));
-        $(".table-responsive").shouldHave(text("myEmail@gmail.com"));
-        $(".table-responsive").shouldHave(text("Male"));
-        $(".table-responsive").shouldHave(text("1234567890"));
-        $(".table-responsive").shouldHave(text("31 December,1999"));
-        $(".table-responsive").shouldHave(text("Maths"));
-        $(".table-responsive").shouldHave(text("Sports"));
-        $(".table-responsive").shouldHave(text("swef.png"));
-        $(".table-responsive").shouldHave(text("MyAdress 14-88"));
-        $(".table-responsive").shouldHave(text("NCR"));
-        $(".table-responsive").shouldHave(text("Delhi"));
+        $(".table-responsive").shouldHave(
+                text("My Name"),
+                text("myEmail@gmail.com"),
+                text("Male"),
+                text("1234567890"),
+                text("Maths"),
+                text("Sports"),
+                text("swef.png"),
+                text("MyAdress 14-88"),
+                text("NCR"),
+                text("Delhi")
+                );
     }
 }
-
-
-
