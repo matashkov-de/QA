@@ -12,40 +12,64 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationFormTestWithPageObj {
+    RegistrationPage registrationPage = new RegistrationPage();
+
+    //задаем переменные
+    String headerText = "Practice Form";
+    String firstName = "My";
+    String lastName = "Name";
+    String userEmail = "myEmail@gmail.com";
+    String userGender = "Male";
+    String userNumber = "1234567890";
+    String year = "1999";
+    String month = "December";
+    String day = "31";
+    String subjectShort = "Ma";
+    String subject = "Maths";
+    String hobby = "Sports";
+    String pathName = "src/test/resources/swef.png";
+    String fileName = "swef.png";
+    String currentAddress = "MyAdress 14-88";
+    String state = "NCR";
+    String city = "Delhi";
+
+
+
+
 
     @Test
     void successFillTest () {
-        Configuration.browserSize = "1920x1080";
-        open("https://demoqa.com/automation-practice-form");
 
         // Заполнение формы
-        new RegistrationPage().setPageLoadCheck("Practice Form");
-        new RegistrationPage().setFirstName("My");
-        new RegistrationPage().setLastName("Name");
-        new RegistrationPage().setUserEmail("myEmail@gmail.com");
-        new RegistrationPage().setUserGender("Male");
-        new RegistrationPage().setUserNumber("1234567890");
-        new RegistrationPage().setDateOfBirth("1999", "December","31");
-        new RegistrationPage().setSubject("Ma", "Maths");
-        new RegistrationPage().setHobby("Sports");
-        new RegistrationPage().uploadPicture("src/test/resources/swef.png");
-        new RegistrationPage().setCurrentAddress("MyAdress 14-88");
-        new RegistrationPage().setStateCity("NCR", "Delhi");
-        new RegistrationPage().clickSubmit();
+
+        registrationPage
+                .openPage(headerText)
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .setUserEmail(userEmail)
+                .setUserGender(userGender)
+                .setUserNumber(userNumber)
+                .setDateOfBirth(year, month, day)
+                .setSubject(subjectShort, subject)
+                .setHobby(hobby)
+                .uploadPicture(pathName)
+                .setCurrentAddress(currentAddress)
+                .setStateCity(state, city)
+                .clickSubmit();
 
         //Проверка отправленной формы
 
-        $(".table-responsive").shouldHave(
-                text("My Name"),
-                text("myEmail@gmail.com"),
-                text("Male"),
-                text("1234567890"),
-                text("Maths"),
-                text("Sports"),
-                text("swef.png"),
-                text("MyAdress 14-88"),
-                text("NCR"),
-                text("Delhi")
-                );
+        registrationPage
+                .tableCheck("Thanks for submitting the form")
+                .checkForm("Student Name", firstName + " " + lastName)
+                .checkForm("Student Email", userEmail)
+                .checkForm("Gender", userGender)
+                .checkForm("Mobile", userNumber)
+                .checkForm("Date of Birth", day + " " + month + "," + year)
+                .checkForm("Subjects", subject)
+                .checkForm("Hobbies", hobby)
+                .checkForm("Picture", fileName)
+                .checkForm("Address", currentAddress)
+                .checkForm("State and City", state + " " + city);
     }
 }
