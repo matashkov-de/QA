@@ -32,7 +32,7 @@ public class RegistrationFormTestWithPageObj {
     String currentAddress = "MyAdress 14-88";
     String state = "NCR";
     String city = "Delhi";
-
+    String tableHeader = "Thanks for submitting the form";
 
 
 
@@ -60,7 +60,7 @@ public class RegistrationFormTestWithPageObj {
         //Проверка отправленной формы
 
         registrationPage
-                .tableCheck("Thanks for submitting the form")
+                .tableCheck(tableHeader)
                 .checkForm("Student Name", firstName + " " + lastName)
                 .checkForm("Student Email", userEmail)
                 .checkForm("Gender", userGender)
