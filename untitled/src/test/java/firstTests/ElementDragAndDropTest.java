@@ -18,6 +18,8 @@ public class ElementDragAndDropTest {
         //check: Элементы  поменялись местами
         $("#column-a header").shouldHave(text("B"));
         $("#column-b header").shouldHave(text("A"));
+
+        //Вывод результата
         System.out.println("Элементы поменялись местами");
     }
 }
