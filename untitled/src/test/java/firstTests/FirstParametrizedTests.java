@@ -53,13 +53,13 @@ public class FirstParametrizedTests {
     })
     @ParameterizedTest (name = "Отображение типа текста \"{0}\" в отправленной форме")
     void languageTextVisibleInOutputForm (String testData, String visibleResult) {
-        //Ввести полное имя
+        //Ввести значение в поле ввода
         $$("input").findBy(type(testData)).setValue(visibleResult);
 
         //Нажать кнопку отправки формы
         $(byText("Submit")).click();
 
-        //check: В отправленной форме отображается имя на нужном языке
+        //check: В отправленной форме отображается введенное значение
         $$("#output").find(text(visibleResult)).shouldBe(visible);
     }
 }
