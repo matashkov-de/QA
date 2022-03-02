@@ -1,18 +1,16 @@
 package allureReportsTests;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class ListenerTest {
 
     private static final String searchValue = "Selenide";
-    private static final String visibleTab = "feature";
+    private static final String visibleTab = "Issues";
     @Test
     public void firstIssueSelenideNameCheck() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -21,7 +19,7 @@ public class ListenerTest {
         open("https://github.com/");
 
         //Ввести в поиске Selenide
-        $(".header-search-input").setValue("Selenide");
+        $(".header-search-input").setValue(searchValue);
         $(".header-search-input").submit();
 
         //Открыть первую ссылку

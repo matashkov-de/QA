@@ -11,7 +11,7 @@ import static io.qameta.allure.Allure.step;
 public class StepsTest {
 
     private static final String searchValue = "Selenide";
-    private static final String visibleTab = "rurgu";
+    private static final String visibleTab = "Issues";
 
     @Test
     public void firstIssueSelenideNameCheckWithSteps() {
