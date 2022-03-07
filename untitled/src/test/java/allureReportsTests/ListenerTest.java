@@ -18,7 +18,7 @@ public class ListenerTest {
         //Открыть  главную страницу github
         open("https://github.com/");
 
-        //Ввести в поиске Selenide
+        //Перейти в поле ввода и ввести Selenide
         $(".header-search-input").setValue(searchValue);
         $(".header-search-input").submit();
 
