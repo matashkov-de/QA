@@ -15,7 +15,7 @@ public class ListenerTest {
     public void firstIssueSelenideNameCheck() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        //Открыть github
+        //Открыть  главную страницу github
         open("https://github.com/");
 
         //Ввести в поиске Selenide
