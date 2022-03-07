@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class ListenerTest {
 
     private static final String searchValue = "Selenide";
-    private static final String visibleTab = "Issues";
+    private static final String visibleTabs = "Issues";
     @Test
     public void firstIssueSelenideNameCheck() {
         SelenideLogger.addListener("allure", new AllureSelenide());
@@ -29,7 +29,7 @@ public class ListenerTest {
         $("#issues-tab").click();
 
         //check: check: В навигации есть таб с названием Issues
-        $(".UnderlineNav-body").shouldHave((text(visibleTab)));
+        $(".UnderlineNav-body").shouldHave((text(visibleTabs)));
     }
 
 }
