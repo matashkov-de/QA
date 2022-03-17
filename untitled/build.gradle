@@ -47,11 +47,6 @@ allure {
             }
         }
     }
-    task allureReportsTests_test(type: Test) {
-        useJUnitPlatform{
-            includeTags "jenkinsTest"
-        }
-    }
 }
 
 
