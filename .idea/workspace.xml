@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b07a1559-631d-4274-b580-de5da69e6bb7" name="Changes" comment="">
+    <list default="true" id="b07a1559-631d-4274-b580-de5da69e6bb7" name="Changes" comment="fixes added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/untitled/src/test/java/allureReportsTests/StepsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/src/test/java/allureReportsTests/StepsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,8 +111,8 @@
       <recent name="firstTests" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.untitled [allureServe]">
-    <configuration name="WebSteps" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.StepsTest">
+    <configuration name="StepsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/untitled" />
@@ -126,7 +125,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;allureReportsTests.WebSteps&quot;" />
+            <option value="&quot;allureReportsTests.StepsTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -228,11 +227,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.StepsTest" />
         <item itemvalue="Gradle.untitled [allureServe]" />
         <item itemvalue="Gradle.WebStepsTest.webStepsAllureTest" />
         <item itemvalue="Gradle.WebSteps.tdtet" />
         <item itemvalue="Gradle.WebSteps.webStepsAllureTest" />
-        <item itemvalue="Gradle.WebSteps" />
       </list>
     </recent_temporary>
   </component>
@@ -371,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646664427906</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fixes added">
+      <created>1647531887423</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1647531887423</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -402,7 +408,8 @@
     <MESSAGE value="ListenerTest class changes" />
     <MESSAGE value="ListenerTest variable changes" />
     <MESSAGE value="ListenerTest comment fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="ListenerTest comment fix" />
+    <MESSAGE value="fixes added" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/QA$FirstAutoTests_successFillTest.ic" NAME="FirstAutoTests.successFillTest Coverage Results" MODIFIED="1644416801439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

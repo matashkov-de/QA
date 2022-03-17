@@ -19,7 +19,7 @@ public class StepsTest {
     @BeforeAll
     static void beforeAll(){
         Configuration.browserSize = "1920x1080";
-        Configuration.browser = System.getProperty("browser", "safari");
+        Configuration.browser = System.getProperty("browser", "chrome");
 
     }
 
