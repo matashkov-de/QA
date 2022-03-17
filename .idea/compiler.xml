@@ -4,6 +4,9 @@
     <bytecodeTargetLevel>
       <module name="untitled" target="11" />
       <module name="untitled.main" target="11" />
+      <module name="untitled.QA" target="11" />
+      <module name="untitled.QA.main" target="11" />
+      <module name="untitled.QA.test" target="11" />
       <module name="untitled.test" target="11" />
     </bytecodeTargetLevel>
   </component>
