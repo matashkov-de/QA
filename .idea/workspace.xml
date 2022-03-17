@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b07a1559-631d-4274-b580-de5da69e6bb7" name="Changes" comment="ListenerTest comment fix" />
+    <list default="true" id="b07a1559-631d-4274-b580-de5da69e6bb7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled/src/test/java/allureReportsTests/StepsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/src/test/java/allureReportsTests/StepsTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

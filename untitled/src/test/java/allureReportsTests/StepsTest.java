@@ -1,17 +1,28 @@
 package allureReportsTests;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-
+@Tag("jenkinsTest")
 public class StepsTest {
 
     private static final String searchValue = "Selenide";
     private static final String visibleTab = "Issues";
+
+    @BeforeAll
+    static void beforeAll(){
+        Configuration.browserSize = "1920x1080";
+        Configuration.browser = System.getProperty("browser", "safari");
+
+    }
+
 
     @Test
     public void firstIssueSelenideNameCheckWithSteps() {

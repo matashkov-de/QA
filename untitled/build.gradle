@@ -18,6 +18,21 @@ dependencies {
             'org.slf4j:slf4j-simple:1.7.29',
             'org.junit.jupiter:junit-jupiter-engine:5.8.2'
     )
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+    tasks.withType(Test) {
+        systemProperties(System.getProperties())
+        useJUnitPlatform()
+
+        testLogging {
+            lifecycle {
+//            events "started", "failed"
+                events "started", "skipped", "failed", "standard_error", "standard_out"
+                exceptionFormat "short"
+            }
+        }
+    }
 }
 
 allure {
@@ -32,9 +47,15 @@ allure {
             }
         }
     }
+    task allureReportsTests_test(type: Test) {
+        useJUnitPlatform{
+            includeTags "jenkinsTest"
+        }
+    }
 }
 
 
 test {
     useJUnitPlatform()
 }
+
